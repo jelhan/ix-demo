@@ -4,6 +4,7 @@
       <th>Name</th>
       <th>Zeitraum</th>
       <th>Adresse</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
@@ -12,6 +13,11 @@
         <td data-test-column="name">{{conference.name}}</td>
         <td data-test-column="period">{{conference.period}}</td>
         <td data-test-column="address">{{conference.address}}</td>
+        <td>
+          <button onclick={{action "delete" conference}} data-test-button="delete">
+            Löschen
+          </button>
+        </td>
       </tr>
     {{/each}}
   </tbody>
