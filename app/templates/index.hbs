@@ -1,3 +1,11 @@
+<LinkTo
+  @params={{array "new"}}
+  class="btn btn-primary"
+  data-test-button="new"
+>
+  Konferenz hinzufügen
+</LinkTo>
+
 <table>
   <thead>
     <tr>
@@ -14,6 +22,13 @@
         <td data-test-column="period">{{conference.period}}</td>
         <td data-test-column="address">{{conference.address}}</td>
         <td>
+          <LinkTo
+            @params={{array "edit" conference.id}}
+            class="btn btn-primary"
+            data-test-button="edit"
+          >
+            bearbeiten
+          </LinkTo>
           <button onclick={{action "delete" conference}} data-test-button="delete">
             Löschen
           </button>

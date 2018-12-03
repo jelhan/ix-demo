@@ -1,0 +1,35 @@
+<BsForm
+  @model={{@conference}}
+  @onSubmit={{@onSave}}
+  data-test-form="conference" as |form|
+>
+  <form.element
+    @label="Name"
+    @property="name"
+    data-test-element="name"
+  />
+  <form.element
+    @label="Beginn"
+    @property="startDate"
+    @controlType="date"
+    data-test-element="start-date"
+  />
+  <form.element
+    @label="Ende"
+    @property="endDate"
+    @controlType="date"
+    data-test-element="end-date"
+  />
+  <form.element
+    @label="Adresse"
+    @property="address"
+    data-test-element="address"
+  />
+  <BsButton
+    @type="primary"
+    @buttonType="submit"
+    data-test-button="submit"
+  >
+    Speichern
+  </BsButton>
+</BsForm>

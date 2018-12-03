@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('edit', {
+    path: 'edit/:conference_id'
+  });
+  this.route('new');
 });
 
 export default Router;
