@@ -23,7 +23,7 @@
   {{/each}}
 </LeafletMap>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -46,7 +46,11 @@
           >
             bearbeiten
           </LinkTo>
-          <button onclick={{action "delete" conference}} data-test-button="delete">
+          <button
+            onclick={{action "delete" conference}}
+            class="btn btn-danger"
+            data-test-button="delete"
+          >
             Löschen
           </button>
         </td>
