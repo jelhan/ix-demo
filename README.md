@@ -1,5 +1,7 @@
 # ix-demo
 
+[![Build Status](https://travis-ci.org/jelhan/ix-demo.svg?branch=master)](https://travis-ci.org/jelhan/ix-demo)
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
