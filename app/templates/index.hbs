@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Zeitraum</th>
+      <th>Adresse</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.model as |conference|}}
+      <tr data-test-conference={{conference.id}}>
+        <td data-test-column="name">{{conference.name}}</td>
+        <td data-test-column="period">{{conference.period}}</td>
+        <td data-test-column="address">{{conference.address}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
