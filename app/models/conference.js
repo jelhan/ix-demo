@@ -2,10 +2,14 @@ import DS from 'ember-data';
 import { computed } from '@ember/object';
 
 export default DS.Model.extend({
-  address: DS.attr('string'),
   name: DS.attr('string'),
+
   startDate: DS.attr('string'),
   endDate: DS.attr('string'),
+
+  address: DS.attr('string'),
+  lat: DS.attr('number'),
+  lng: DS.attr('number'),
 
   period: computed('startDate', 'endDate', function() {
     let { startDate: startDateString, endDate: endDatestring } = this;

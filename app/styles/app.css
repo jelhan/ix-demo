@@ -1,0 +1,15 @@
+html,
+body,
+body > .ember-view,
+body > .ember-view > .container {
+  height: 100%;
+}
+
+body > .ember-view {
+  padding: 1em 0;
+}
+
+.leaflet-container {
+  height: 75%;
+  margin: 2em 0;
+}

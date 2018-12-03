@@ -20,6 +20,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    openCage: {
+      apiKey: '4cc47405836444d9b46ca0fe184b3447'
     }
   };
 

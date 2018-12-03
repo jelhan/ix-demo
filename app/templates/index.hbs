@@ -6,6 +6,23 @@
   Konferenz hinzufügen
 </LinkTo>
 
+<LeafletMap @lat={{52.518611}} @lng={{13.40833}} @zoom={{1}} as |Layers|>
+  <Layers.tile
+    @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+  />
+  {{#each this.model as |conference|}}
+    <Layers.marker @lat={{conference.lat}} @lng={{conference.lng}} as |Marker|>
+      <Marker.popup>
+        <h3>{{conference.name}}</h3>
+        <dl>
+          <dt>Zeitraum</dt><dd>{{conference.period}}</dd>
+          <dt>Adresse</dt><dd>{{conference.address}}</dd>
+        </dl>
+      </Marker.popup>
+    </Layers.marker>
+  {{/each}}
+</LeafletMap>
+
 <table>
   <thead>
     <tr>

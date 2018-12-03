@@ -12,7 +12,9 @@ module('Acceptance | conferences', function(hooks) {
       name: 'JSConf EU',
       startDate: '2019-06-01',
       endDate: '2019-06-02',
-      address: 'Eichenstraße 4, 12435 Berlin, Germany'
+      address: 'Eichenstraße 4, 12435 Berlin, Germany',
+      lat: 52.4962461,
+      lng: 13.4521016
     });
 
     await visit('/');
@@ -28,8 +30,14 @@ module('Acceptance | conferences', function(hooks) {
       name: 'c\'t <webdev>',
       startDate: '2019-02-06',
       endDate: '2019-02-08',
-      address: 'Im Mediapark 7, 50670 Köln'
+      address: 'Im Mediapark 7, 50670 Köln',
+      lat: 100,
+      lng: 100
     };
+
+    server.get('https://api.opencagedata.com/geocode/v1/json', () => {
+      return { results: [ { geometry: { lat: newConf.lat, lng: newConf.lng } } ] };
+    });
 
     await visit('/');
     await click('[data-test-button="new"]');
@@ -53,9 +61,17 @@ module('Acceptance | conferences', function(hooks) {
       name: 'JSConf EU',
       startDate: '2019-06-01',
       endDate: '2019-06-02',
-      address: 'Eichenstraße 4, 12435 Berlin, Germany'
+      address: 'Eichenstraße 4, 12435 Berlin, Germany',
+      lat: 52.4962461,
+      lng: 13.4521016
     });
+
     let updatedAddress = 'Eichenstraße 4, 12435 Berlin';
+    let updatedAddressCoordinates = { lat: 100, lng: 100 };
+
+    server.get('https://api.opencagedata.com/geocode/v1/json', () => {
+      return { results: [ { geometry: updatedAddressCoordinates } ] };
+    });
 
     await visit('/');
 
@@ -74,7 +90,9 @@ module('Acceptance | conferences', function(hooks) {
       name: 'JSConf EU',
       startDate: '2019-06-01',
       endDate: '2019-06-02',
-      address: 'Eichenstraße 4, 12435 Berlin, Germany'
+      address: 'Eichenstraße 4, 12435 Berlin, Germany',
+      lat: 52.4962461,
+      lng: 13.4521016
     });
 
     await visit('/');
