@@ -2,8 +2,12 @@
 
 [![Build Status](https://travis-ci.org/jelhan/ix-demo.svg?branch=master)](https://travis-ci.org/jelhan/ix-demo)
 
+This application was developed as part of article [*Entwicklung ambitionierter Webanwendungen mit Ember.js*](https://www.heise.de/select/ix/2019/1/1546252436095917) published in iX 1/2019.
+
+The application is also served at GitHub pages if you want to check it out without building it yourself: [jelhan.github.io/ix-demo/](https://jelhan.github.io/ix-demo/)
+
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Feel free to [open an issue](https://github.com/jelhan/ix-demo/issues) if you have any questions.
 
 ## Prerequisites
 
