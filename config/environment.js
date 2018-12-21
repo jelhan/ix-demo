@@ -48,7 +48,14 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    // production build is deployed to GitHub pages
+    ENV.rootURL = '/ix-demo';
+    ENV.locationType = 'hash';
+
+    // Mirage is disabled for production environment by default
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
   }
 
   return ENV;
