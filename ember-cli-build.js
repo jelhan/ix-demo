@@ -8,6 +8,10 @@ module.exports = function(defaults) {
       'bootstrapVersion': 4,
       'importBootstrapFont': false,
       'importBootstrapCSS': true
+    },
+    fingerprint: {
+      // fingerprinting leaflet icons is not supported
+      exclude: ['images/layers', 'images/marker'],
     }
   });
 
